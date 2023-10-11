@@ -1,12 +1,16 @@
 package com.itheima.utils;
+
 import com.aliyun.oss.OSS;
 import com.aliyun.oss.OSSClientBuilder;
 import com.aliyun.oss.common.auth.CredentialsProviderFactory;
 import com.aliyun.oss.common.auth.EnvironmentVariableCredentialsProvider;
 import com.aliyuncs.exceptions.ClientException;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
-import java.io.*;
+
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.UUID;
 
 /**
@@ -14,8 +18,13 @@ import java.util.UUID;
  */
 @Component
 public class AliOSSUtils {
-    private String endpoint = "https://oss-cn-beijing.aliyuncs.com";
-    private String bucketName = "tlisa-web";
+//    private String endpoint = "https://oss-cn-beijing.aliyuncs.com";
+//    private String bucketName = "tlisa-web";
+      @Value("${aliyun.oss.endpoint}")
+      private String endpoint ;
+
+      @Value("${aliyun.oss.bucketName}")
+      private String bucketName ;
 
     /**
      * 实现上传图片到OSS
@@ -68,7 +77,5 @@ public class AliOSSUtils {
         ossClient.shutdown();
         return url;// 把上传到oss的路径返回
     }
-
-
 
 }
