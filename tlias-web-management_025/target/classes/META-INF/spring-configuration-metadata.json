@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "name": "aliyun.oss",
+      "type": "com.itheima.utils.AlIOSSProperties",
+      "sourceType": "com.itheima.utils.AlIOSSProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "aliyun.oss.bucket-name",
+      "type": "java.lang.String",
+      "sourceType": "com.itheima.utils.AlIOSSProperties"
+    },
+    {
+      "name": "aliyun.oss.endpoint",
+      "type": "java.lang.String",
+      "sourceType": "com.itheima.utils.AlIOSSProperties"
+    }
+  ],
+  "hints": []
+}
