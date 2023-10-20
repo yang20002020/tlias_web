@@ -5,8 +5,11 @@ spring:
     url: jdbc:mysql://localhost:3306/tlias
     username: root
     password: fendou2017
+
 #Mybatis配置
 mybatis:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     map-underscore-to-camel-case: true
+
+name: itheima1
